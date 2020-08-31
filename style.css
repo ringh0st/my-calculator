@@ -73,7 +73,11 @@ grid-template-columns: repeat(4, 1fr);
     border: none;
     color:#d4d4d4;
     direction: rtl;
+    /* font-family: 'DM Sans', sans-serif; */
+    font-family: sans-serif;
+
 }
 .fas{
     font-size: 2rem;
+    
 }
