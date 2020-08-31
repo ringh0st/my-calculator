@@ -19,23 +19,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 2%;
+    padding:10px;
 }
 .calc-border{
-    width: 400px;
+    /* width: 400px; */
     /* height: 100px; */
 }
 .calc-buttons-container{
 
-display: flex;
+/* display: flex; */
 /* justify-content: center; */
 /* align-items: center; */
 /* flex-direction: column; */
-flex-wrap: wrap;
-margin: 0 0 3em 0;
+/* flex-wrap: wrap; */
+/* margin: 0 0 3em 0; */
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+/* grid-template-rows: repeat(3, 100px); */
+
 }
 .calc-buttons-container > div{
     background:black;
     width:100px;
     height: 100px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin:1px;
 }
