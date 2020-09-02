@@ -29,16 +29,17 @@
 .calc-buttons-container{
 
 /* display: flex; */
-/* justify-content: center; */
-/* align-items: center; */
+justify-content: center;
+align-items: center;
 /* flex-direction: column; */
 /* flex-wrap: wrap; */
 /* margin: 0 0 3em 0; */
 display: grid;
 grid-template-columns: repeat(4, 1fr);
-/* grid-template-rows: repeat(3, 100px); */
+grid-template-rows: repeat(5, 110px);
 
 }
+
 .calc-buttons-container > div{
     background:#3c3b3b;
     color:#d4d4d4;
@@ -51,13 +52,27 @@ grid-template-columns: repeat(4, 1fr);
     margin:7px;
     font-family: 'DM Sans', sans-serif;
     font-size: 2.5rem;
+    cursor: pointer;
+}
+.calc-buttons-container > div:hover{
+    background:#999999;
+    color:white;
 }
 #ac, #sign, #percent{
     background:#d4d4d4;
     color:black;
 }
+#ac:hover, #sign:hover, #percent:hover{
+    background:#ffffff;
+    color:black;
+}
 #devide, #multiple, #substruct, #add, #equal{
     background:orange;
+    color:white;
+}
+
+#devide:hover, #multiple:hover, #substruct:hover, #add:hover, #equal:hover{
+    background:rgb(253, 210, 131);
     color:white;
 }
 .calc-screen{
