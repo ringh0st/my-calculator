@@ -18,7 +18,7 @@
     margin:20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     border-radius: 2%;
     padding:10px;
 }
@@ -54,9 +54,22 @@ grid-template-rows: repeat(5, 110px);
     font-size: 2.5rem;
     cursor: pointer;
 }
-.calc-buttons-container > div:hover{
+.calc-buttons-container > div:hover, span:hover{
     background:#999999;
     color:white;
+}
+span{
+    grid-column:span 2;
+    width: 200px;
+    border-radius: 50px;
+    margin:7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background:#3c3b3b;
+    color:#d4d4d4;
+    height: 100px;
+        text-align: left;
 }
 #ac, #sign, #percent{
     background:#d4d4d4;

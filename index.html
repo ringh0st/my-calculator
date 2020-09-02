@@ -20,29 +20,28 @@
             <div class="calc-border">
                 <div class="calc-container">
                     <div class="calc-screen">
-                        <input type="text" name="screen" value="0"  id="screen" placeholder="0" disabled="true">
+                        <input data-output class="outout" type="text" name="screen" value="0"  id="screen" placeholder="0" disabled="true">
                     </div>
                     <div class="calc-buttons-container">
-                        <div id="ac" value="AC" onclick="pushButton(this.value)">AC</div>
-                        <div id="sign" value="" onclick="">-/+</div>
-                        <div id="percent" value="" onclick=""><i class="fas fa-percent"></i></div>
-                        <div id="devide" value="" onclick=""><i class="fas fa-divide"></i></div>
-                        <div id="7" value="" onclick="">7</div>
-                        <div id="8" value="" onclick="">8</div>
-                        <div id="9" value="" onclick="">9</div>
-                        <div id="multiple" value="" onclick=""><i class="fas fa-times"></i></div>
-                        <div id="4" value="" onclick="">4</div>
-                        <div id="5" value="" onclick="">5</div>
-                        <div id="6" value="" onclick="">6</div>
-                        <div id="substruct" value="" onclick=""><i class="fas fa-minus"></i></div>
-                        <div id="1" value="" onclick="">1</div>
-                        <div id="2" value="" onclick="">2</div>
-                        <div id="3" value="" onclick="">3</div>
-                        <div id="add" value="" onclick=""><i class="fas fa-plus"></i></div>
-                        <div id="0" value="" onclick="">0</div>
-                        <div id="dot" value="" onclick="">.</div>
-                        <div id="" value="" onclick=""></div>
-                        <div id="equal" value="" onclick=""><i class="fas fa-equals"></i></div>
+                        <div data-delete id="ac" >AC</div>
+                        <div data-oparation id="sign" >-/+</div>
+                        <div data-oparation id="percent" ><i class="fas fa-percent"></i></div>
+                        <div data-oparation id="devide" ><i class="fas fa-divide"></i></div>
+                        <div data-number id="7" >7</div>
+                        <div data-number id="8">8</div>
+                        <div data-number id="9" >9</div>
+                        <div data-oparation id="multiple" ><i class="fas fa-times"></i></div>
+                        <div data-number id="4" >4</div>
+                        <div data-number id="5" >5</div>
+                        <div data-number id="6" >6</div>
+                        <div data-oparation id="substruct" ><i class="fas fa-minus"></i></div>
+                        <div data-number id="1" >1</div>
+                        <div data-number id="2" >2</div>
+                        <div data-number id="3" >3</div>
+                        <div data-oparation id="add" ><i class="fas fa-plus"></i></div>
+                        <span data-number id="0" >0</span>
+                        <div data-number id="dot" >.</div>
+                        <div data-equal id="equal" ><i class="fas fa-equals"></i></div>
                     </div>
                 </div>
             </div>
