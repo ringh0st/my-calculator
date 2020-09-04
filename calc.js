@@ -2,7 +2,6 @@ class Calculator{
     constructor(prevValue){
         this.prevValue = prevValue
         this.clear()
-        
     }
     clear(){
         this.currentOparand = '';
@@ -10,7 +9,9 @@ class Calculator{
         this.oparation = undefined;
     }
     delete(){
-
+        this.currentOparand = '';
+        this.prevOparand = '';
+        this.oparation = undefined;
     }
     appendNumber(number){
         // console.log(this.prevValue)
@@ -47,6 +48,7 @@ const calculator = new Calculator(prevValue);
 
 numberButtons.forEach(button =>{
     button.addEventListener('click',()=>{
+        console.log(button)
         calculator.appendNumber(button.innerText);
         calculator.updateDisplay();
         // console.log(outputScreen.innerText = button.innerText)
@@ -58,4 +60,8 @@ operationButtons.forEach(button => {
         console.log(button.id);
         calculator.updateDisplay()
     })
+})
+deleteButton.addEventListener('click', () =>{
+    console.log(deleteButton);
+    calculator.delete()
 })
