@@ -12,6 +12,7 @@ class Calculator{
         this.currentOparand = '';
         this.prevOparand = '';
         this.oparation = undefined;
+        this.prevValue.value = ""
     }
     appendNumber(number){
         // console.log(this.prevValue)
@@ -43,7 +44,8 @@ const operationButtons = document.querySelectorAll('[data-oparation]');
 const equalButton = document.querySelector('[data-equal]');
 const deleteButton = document.querySelector('[data-delete]');
 const prevValue = document.querySelector('[data-output]');
-
+const icon = document.querySelector('.icon-container');
+const container = document.querySelector('.container');
 const calculator = new Calculator(prevValue);
 
 numberButtons.forEach(button =>{
@@ -64,4 +66,11 @@ operationButtons.forEach(button => {
 deleteButton.addEventListener('click', () =>{
     console.log(deleteButton);
     calculator.delete()
+})
+
+icon.addEventListener('click', ()=>{
+    console.log(icon);
+    icon.style.display = "none";
+    container.style.display = "flex";
+    
 })
