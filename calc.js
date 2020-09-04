@@ -16,14 +16,18 @@ class Calculator{
     }
     appendNumber(number){
         // console.log(this.prevValue)
-        
+
         this.currentOparand = this.currentOparand.toString() + number.toString()
         // this.prevValue.value = this.prevValue.value + number
+        console.log(this.currentOparand);
 
     }
     chooseOparation(oparation){
-        console.log(oparation.innerText);
-
+        if(this.prevOparand === NaN){
+            this.prevOparand = "0" 
+            console.log(this.prevOparand)
+        }
+        console.log(oparation.innerText)
         this.oparation = oparation
         this.prevOparand =this.currentOparand
         this.currentOparand = ''
@@ -48,9 +52,8 @@ const icon = document.querySelector('.icon-container');
 const container = document.querySelector('.container');
 const calculator = new Calculator(prevValue);
 
-numberButtons.forEach(button =>{
-    button.addEventListener('click',()=>{
-        console.log(button)
+numberButtons.forEach(button => {
+    button.addEventListener('click',() => {
         calculator.appendNumber(button.innerText);
         calculator.updateDisplay();
         // console.log(outputScreen.innerText = button.innerText)
@@ -66,6 +69,8 @@ operationButtons.forEach(button => {
 deleteButton.addEventListener('click', () =>{
     console.log(deleteButton);
     calculator.delete()
+    icon.style.display = "grid";
+    container.style.display = "none";
 })
 
 icon.addEventListener('click', ()=>{
