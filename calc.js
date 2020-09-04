@@ -1,30 +1,38 @@
 class Calculator{
-    constructor(outputScreen){
-        this.outputScreen = outputScreen
+    constructor(prevValue){
+        this.prevValue = prevValue
         this.clear()
         
     }
     clear(){
-        // this.outputScreen = '';
+        this.currentOparand = '';
+        this.prevOparand = '';
         this.oparation = undefined;
     }
     delete(){
 
     }
     appendNumber(number){
-        console.log(this.outputScreen)
-        this.outputScreen.value = number
+        // console.log(this.prevValue)
+        
+        this.currentOparand = this.currentOparand.toString() + number.toString()
+        // this.prevValue.value = this.prevValue.value + number
 
     }
     chooseOparation(oparation){
+        console.log(oparation.innerText);
 
+        this.oparation = oparation
+        this.prevOparand =this.currentOparand
+        this.currentOparand = ''
     }
     compute(){
         
     }
     updateDisplay(){
-        console.log(this.outputScreen)
-        this.outputScreen.innerText = this.outputScreen
+        // console.log(this.prevValue)
+        // this.prevValue.innerText = this.prevValue
+        this.prevValue.value =this.currentOparand
 
     }
 }
@@ -33,14 +41,21 @@ const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-oparation]');
 const equalButton = document.querySelector('[data-equal]');
 const deleteButton = document.querySelector('[data-delete]');
-const outputScreen = document.querySelector('[data-output]');
+const prevValue = document.querySelector('[data-output]');
 
-const calculator = new Calculator(outputScreen);
+const calculator = new Calculator(prevValue);
 
 numberButtons.forEach(button =>{
     button.addEventListener('click',()=>{
         calculator.appendNumber(button.innerText);
         calculator.updateDisplay();
         // console.log(outputScreen.innerText = button.innerText)
+    })
+})
+operationButtons.forEach(button => {
+    button.addEventListener('click', ()=>{
+        calculator.chooseOparation(button.innerText)
+        console.log(button.id);
+        calculator.updateDisplay()
     })
 })
