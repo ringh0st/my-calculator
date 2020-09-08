@@ -15,30 +15,34 @@ class Calculator{
         this.prevValue.value = ""
     }
     appendNumber(number){
-        // console.log(this.prevValue)
-
-        this.currentOparand = this.currentOparand.toString() + number.toString()
+        if (this.currentOparand != "0"){
+            this.currentOparand = this.currentOparand.toString() + number.toString()
+        } else {
+            this.currentOparand = ""  
+        }
+        
         // this.prevValue.value = this.prevValue.value + number
-        console.log(this.currentOparand);
+        // console.log(this.currentOparand);
 
     }
     chooseOparation(oparation){
-        if(this.prevOparand === NaN){
-            this.prevOparand = "0" 
-            console.log(this.prevOparand)
-        }
-        console.log(oparation.innerText)
-        this.oparation = oparation
-        this.prevOparand =this.currentOparand
-        this.currentOparand = ''
+        console.log(oparation);
+        
+        // if(this.prevOparand === NaN){
+        //     this.prevOparand = "0" 
+        //     console.log(this.prevOparand)
+        // }
+        // console.log(oparation.innerText)
+        // this.oparation = oparation
+        // this.prevOparand =this.currentOparand
+        // this.currentOparand = ''
     }
     compute(){
         
     }
     updateDisplay(){
-        // console.log(this.prevValue)
-        // this.prevValue.innerText = this.prevValue
         this.prevValue.value =this.currentOparand
+        
 
     }
 }
@@ -50,6 +54,7 @@ const deleteButton = document.querySelector('[data-delete]');
 const prevValue = document.querySelector('[data-output]');
 const icon = document.querySelector('.icon-container');
 const container = document.querySelector('.container');
+
 const calculator = new Calculator(prevValue);
 
 numberButtons.forEach(button => {
@@ -61,13 +66,13 @@ numberButtons.forEach(button => {
 })
 operationButtons.forEach(button => {
     button.addEventListener('click', ()=>{
-        calculator.chooseOparation(button.innerText)
-        console.log(button.id);
+        calculator.chooseOparation(button.id)
+        // console.log(button.id);
         calculator.updateDisplay()
     })
 })
 deleteButton.addEventListener('click', () =>{
-    console.log(deleteButton);
+    // console.log(deleteButton);
     calculator.delete()
     icon.style.display = "grid";
     container.style.display = "none";
