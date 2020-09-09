@@ -20,22 +20,10 @@ class Calculator{
         } else {
             this.currentOparand = ""  
         }
-        
-        // this.prevValue.value = this.prevValue.value + number
-        // console.log(this.currentOparand);
 
     }
     chooseOparation(oparation){
         console.log(oparation);
-        
-        // if(this.prevOparand === NaN){
-        //     this.prevOparand = "0" 
-        //     console.log(this.prevOparand)
-        // }
-        // console.log(oparation.innerText)
-        // this.oparation = oparation
-        // this.prevOparand =this.currentOparand
-        // this.currentOparand = ''
     }
     compute(){
         
