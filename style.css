@@ -129,7 +129,10 @@ span{
 
 /* Media Queries: Tablet Landscape */
 @media screen and (max-width: 375px) {
-  .container { width:100vw; };
+  .container { 
+    width:100vw; 
+    height: 100vh;
+  };
   .calc-buttons-container > div{
     width:80px;
     height: 80px;
