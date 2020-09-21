@@ -38,6 +38,13 @@ class Calculator{
         const prev = parseFloat(this.prevOparand);
         const current = parseFloat(this.currentOparand);
         if (isNaN(prev) || isNaN(current)) return;
+        if (this.operation === 'percent'){
+            computation = prev / 100;
+            console.log(computation);  
+            this.currentOparand = computation;
+            this.operation = undefined;
+            this.prevOparand = '';
+        }
         switch(this.operation){
             case "add":
                 computation = prev + current;
@@ -51,6 +58,10 @@ class Calculator{
             case "multiple":
                 computation = prev * current;
                 break;
+            // case "percent":
+            //     computation = prev / 100;
+            //     console.log(computation)
+            //     break;
             default:
                 return;
         }
@@ -70,8 +81,8 @@ const equalButton = document.querySelector('[data-equal]');
 const deleteButton = document.querySelector('[data-delete]');
 const prevValue = document.querySelector('[data-output]');
 const icon = document.querySelector('.icon-container');
+const closedIcon = document.querySelector('.fa-times-circle');
 const container = document.querySelector('.container');
-
 const calculator = new Calculator(prevValue);
 
 numberButtons.forEach(button => {
@@ -85,7 +96,7 @@ numberButtons.forEach(button => {
 operationButtons.forEach(button => {
     button.addEventListener('click', ()=>{
         calculator.chooseOperation(button.id)
-        calculator.updateDisplay()
+        // calculator.updateDisplay()
     })
 })
 
@@ -95,12 +106,16 @@ equalButton.addEventListener('click', ()=>{
 })
 
 // makes the app closed.
+closedIcon.addEventListener('click', ()=>{
+    calculator.clear()
+    calculator.updateDisplay()
+    icon.style.display = "grid";
+    container.style.display = "none";  
+})
 deleteButton.addEventListener('click', () =>{
     // console.log(deleteButton);
     calculator.clear()
     calculator.updateDisplay()
-    icon.style.display = "grid";
-    container.style.display = "none";
 })
 
 //makes the app opened.
@@ -108,5 +123,4 @@ icon.addEventListener('click', ()=>{
     console.log(icon);
     icon.style.display = "none";
     container.style.display = "flex";
-    
 })

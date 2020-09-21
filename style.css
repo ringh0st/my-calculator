@@ -95,7 +95,7 @@ span{
     /* align-items: flex-end; */
 }
 .fa-times-circle{
-  color: white;
+  color: grey;
   position: absolute;
   font-size: 2rem;
   left: 5px;
@@ -103,6 +103,10 @@ span{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.fa-times-circle:hover{
+  color:white;
+
 }
 #screen{
     font-size: 7rem;
