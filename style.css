@@ -91,7 +91,18 @@ span{
     height: 200px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    position: relative;
+    /* align-items: flex-end; */
+}
+.fa-times-circle{
+  color: white;
+  position: absolute;
+  font-size: 2rem;
+  left: 5px;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #screen{
     font-size: 7rem;
