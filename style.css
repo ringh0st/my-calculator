@@ -160,7 +160,7 @@ grid-template-rows: repeat(5, 110px);
 @media screen and (max-width: 375px) {
   .container { 
     width:100vw; 
-    height: 100vh;
+    height: 667px;
   };
   .calc-buttons-container > div{
     width:80px;
@@ -174,9 +174,12 @@ grid-template-rows: repeat(5, 110px);
     /* font-size: 2.5rem; */
     cursor: pointer;
   }
+  .calc-screen{
+    height: 220px;
+  }
   .calc-buttons-container{
     grid-template-columns: repeat(4, 0fr);
-    grid-template-rows: repeat(5, 90px);
+    grid-template-rows: repeat(5, 86px);
     }
   .calc-buttons-container > div {
       width: 77px;
@@ -194,7 +197,6 @@ grid-template-rows: repeat(5, 110px);
 }
 #screen {
   font-size: 6rem;
-  background: black;
   width: 325px;
 }
 .fas{
