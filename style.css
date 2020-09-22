@@ -3,6 +3,9 @@
     margin: 0;
 }
 
+::placeholder {
+  color: white;
+}
 .hero{
     height: 100vh;
     width: 100vw;
@@ -95,11 +98,12 @@ grid-template-rows: repeat(5, 110px);
     color:white;
 }
 .calc-screen{
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    /* align-items: flex-end; */
+  height: 234px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* align-items: flex-end; */
+  align-items: flex-end;
 }
 .fa-times-circle{
   color: grey;
