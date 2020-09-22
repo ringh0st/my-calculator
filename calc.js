@@ -16,17 +16,19 @@ class Calculator{
         this.currentOparand = this.currentOparand.toString().slice(0, -1)
     }
     appendNumber(number){
-        if (this.currentOparand != "0"){
-            this.currentOparand = this.currentOparand.toString() + number.toString()
-        } else {
-            this.currentOparand = ""  
-        }
+        if (number === '.' && this.currentOparand.includes('.')) return;
+        this.currentOparand = this.currentOparand.toString() + number.toString()
+        // if (this.currentOparand != "0"){
+        //     this.currentOparand = this.currentOparand.toString() + number.toString()
+        // } else {
+        //     this.currentOparand = ""  
+        // }
 
     }
     chooseOperation(operation){
         console.log(operation);
         if (this.operation === '') return;
-        if (this.operation){
+        if (this.operation !== ''){
             this.compute()
         }
         this.operation = operation;
@@ -38,6 +40,7 @@ class Calculator{
         const prev = parseFloat(this.prevOparand);
         const current = parseFloat(this.currentOparand);
         if (isNaN(prev) || isNaN(current)) return;
+
         if (this.operation === 'percent'){
             computation = prev / 100;
             console.log(computation);  
@@ -68,7 +71,6 @@ class Calculator{
         this.currentOparand = computation;
         this.operation = undefined;
         this.prevOparand = '';
-        
     }
     updateDisplay(){
         this.prevValue.value =this.currentOparand   

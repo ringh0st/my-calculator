@@ -14,13 +14,14 @@
 }
 
 .container{
-    background:black;
+    /* background:black; */
     margin:20px;
     display: none;
     justify-content: center;
     align-content: center;
     border-radius: 15px;
     padding:10px;
+    background: #00000085
 }
 
 .calc-buttons-container{
@@ -38,8 +39,10 @@ grid-template-rows: repeat(5, 110px);
 }
 
 .calc-buttons-container > div{
-    background:#3c3b3b;
-    color:white;
+    /* background:#3c3b3b;
+    color:white; */
+    background: #d2dec5;
+    color: #000000;
     width:100px;
     height: 100px;
     border-radius: 50%;
@@ -51,11 +54,11 @@ grid-template-rows: repeat(5, 110px);
     font-size: 2.5rem;
     cursor: pointer;
 }
-.calc-buttons-container > div:hover, span:hover{
+.calc-buttons-container > div:hover, .zero:hover{
     background:#999999;
     color:white;
 }
-span{
+.zero{
     grid-column:span 2;
     width: 200px;
     border-radius: 50px;
@@ -69,6 +72,8 @@ span{
     text-align: left;
     padding-left: 33px;
     padding-top: 24px;
+    background: #5bc1af;
+    color: black;
 }
 #ac, #sign, #percent{
     background:white;
@@ -79,8 +84,10 @@ span{
     color:black;
 }
 #devide, #multiple, #substruct, #add, #equal{
-    background:orange;
-    color:white;
+    /* background:orange;
+    color:white; */
+    background: #157376;
+    color: white;
 }
 
 #devide:hover, #multiple:hover, #substruct:hover, #add:hover, #equal:hover{
@@ -109,14 +116,15 @@ span{
 
 }
 #screen{
-    font-size: 7rem;
-    background:black;
+    font-size: 7em;
+    /* background:black; */
     width:400px;
     border: none;
     color:white;
     direction: rtl;
     /* font-family: 'DM Sans', sans-serif; */
-    font-family: sans-serif;    
+    font-family: sans-serif;  
+    background: #00000003  
 }
 .fas{
     font-size: 2rem;  
@@ -155,7 +163,7 @@ span{
       margin: 6px;
       font-size: 2rem;
   }
-  span {
+  .zero {
     width: 160px;
     margin: 7px;
     font-size: 2rem;
