@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+
 ::placeholder {
   color: white;
 }
@@ -44,10 +45,9 @@ grid-template-rows: repeat(5, 110px);
 .calc-buttons-container > div{
     /* background:#3c3b3b;
     color:white; */
+    transition: background-color 0.8s ease-in-out;
     background-color: #d2dec5;
-    transition: background-color 0.8s ease;
     color: #000000;
-    transition: color 0.8s ease;
     width:100px;
     height: 100px;
     border-radius: 50%;
@@ -57,7 +57,7 @@ grid-template-rows: repeat(5, 110px);
     margin:7px;
     font-family: 'DM Sans', sans-serif;
     font-size: 2.5rem;
-    cursor: pointer;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='34' height='41' viewport='0 0 100 100' style='fill:black;font-size:20px;'><text y='50%'>🤔</text></svg>") 16 0,auto; /*!emojicursor.app*/
 }
 .calc-buttons-container > div:hover, .zero:hover{
     background-color:#999999;
@@ -72,8 +72,7 @@ grid-template-rows: repeat(5, 110px);
     font-size: 2.5rem;
     cursor: pointer;
     /* background:#3c3b3b; */
-    transition: background-color 0.8s ease;
-    color:white;
+    /* color:white; */
     height: 100px;
     text-align: left;
     padding-left: 33px;
@@ -81,13 +80,11 @@ grid-template-rows: repeat(5, 110px);
     background-color: #5bc1af;
     transition: background-color 0.8s ease;
     color: black;
-    transition: color 0.8s ease;
 }
 #sign, #percent{
     background-color:white;
     transition: background-color 0.8s ease;
     color:black;
-    transition: color 0.8s ease;
 }
 #ac{
   background-color: black;
@@ -107,7 +104,6 @@ grid-template-rows: repeat(5, 110px);
     background-color: #157376;
     transition: background-color 0.8s ease;
     color: white;
-    transition: color 0.8s ease;
 }
 
 #devide:hover, #multiple:hover, #substruct:hover, #add:hover, #equal:hover{
@@ -172,7 +168,6 @@ grid-template-rows: repeat(5, 110px);
     margin:4px;
     font-family: 'DM Sans', sans-serif;
     /* font-size: 2.5rem; */
-    cursor: pointer;
   }
   .calc-screen{
     height: 220px;

@@ -86,11 +86,13 @@ const icon = document.querySelector('.icon-container');
 const closedIcon = document.querySelector('.fa-times-circle');
 const container = document.querySelector('.container');
 const calculator = new Calculator(prevValue);
-
+const acButton = document.querySelector('#ac')
 numberButtons.forEach(button => {
     button.addEventListener('click',() => {
         calculator.appendNumber(button.innerText);
         calculator.updateDisplay();
+        acButton.innerText = 'C'
+
         // console.log(outputScreen.innerText = button.innerText)
     })
 })
@@ -118,6 +120,7 @@ deleteButton.addEventListener('click', () =>{
     // console.log(deleteButton);
     calculator.clear()
     calculator.updateDisplay()
+    acButton.innerText = 'AC'
 })
 
 //makes the app opened.
