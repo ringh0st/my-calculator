@@ -107,12 +107,13 @@ operationButtons.forEach(button => {
 equalButton.addEventListener('click', ()=>{
     calculator.compute();
     calculator.updateDisplay();
+    calculator.clear();
 })
 
 // makes the app closed.
 closedIcon.addEventListener('click', ()=>{
-    calculator.clear()
-    calculator.updateDisplay()
+    calculator.clear();
+    calculator.updateDisplay();
     icon.style.display = "grid";
     container.style.display = "none";  
 })
