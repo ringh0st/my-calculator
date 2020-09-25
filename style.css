@@ -12,9 +12,9 @@
     width: 100vw;
     background-image: url(https://cdn.geckoandfly.com/wp-content/uploads/2018/03/ios-11-3840x2160-4k-5k-beach-ocean-13655.jpg);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .container{
@@ -261,9 +261,63 @@ body {
     height: 30px;
     border-radius: 50px;
   }
-  .three,
-  .six,
-  .seven {
+  .icon.three,
+  .icon.six,
+  .icon.seven {
     background: #e8a052;
   }
   
+
+.notes-container{
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 25%;
+  flex-direction: column;
+
+}
+.line{
+  height: 25%;
+  width: 100%;
+  background-color: #f1f0f0;
+  /* border: black solid 1px; */
+}
+
+.line.one{
+  position: relative;
+  border-top-left-radius: 82px;
+  border-top-right-radius: 82px;
+  background-color: #FFD11C;
+}
+.line-shaddow{
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  box-shadow:inset 0 0 10px #000000;
+}
+.line.four{
+  border-bottom-left-radius: 82px;
+  border-bottom-right-radius: 82px;}
+/* .line two{
+  background-color: #FFD11C;
+  height: 25%;
+  width: 100%;
+  border: black solid 1px;
+}
+.line three{
+  background-color: #FFD11C;
+  height: 25%;
+  width: 100%;
+  border: black solid 1px;
+}
+.line four{
+  background-color: #FFD11C;
+  height: 25%;
+  width: 100%;
+  border: black solid 1px;
+} */

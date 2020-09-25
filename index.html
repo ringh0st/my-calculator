@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <!-- apple font like -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <title>My Calculator</title>
 </head>
+
 <body>
     <hero class="hero">
-        <header>
+        <!-- <header>
             My Calculator
-        </header>
+        </header> -->
         <container class="container">
             <div class="calc-border">
                 <div class="calc-container">
                     <div class="calc-screen">
-                            <i class="far fa-times-circle"></i>
-                        <input data-output class="outout" type="text" size="7" name="screen" value=""  id="screen"  placeholder="0" disabled="true"/>
+                        <i class="far fa-times-circle"></i>
+                        <input data-output class="outout" type="text" size="7" name="screen" value="" id="screen"
+                            placeholder="0" disabled="true" />
                     </div>
                     <!-- calculator buttons -->
                     <div class="calc-buttons-container">
-                        <div data-delete id="ac" >AC</div>
-                        <div data-operation id="sign" >-/+</div>
-                        <div data-operation id="percent" ><i class="fas fa-percent"></i></div>
-                        <div data-operation id="devide" ><i class="fas fa-divide"></i></div>
-                       
-                        <div data-number id="7" >7</div>
+                        <div data-delete id="ac">AC</div>
+                        <div data-operation id="sign">-/+</div>
+                        <div data-operation id="percent"><i class="fas fa-percent"></i></div>
+                        <div data-operation id="devide"><i class="fas fa-divide"></i></div>
+
+                        <div data-number id="7">7</div>
                         <div data-number id="8">8</div>
-                        <div data-number id="9" >9</div>
-                        <div data-operation id="multiple" ><i class="fas fa-times"></i></div>
-                        
-                        <div data-number id="4" >4</div>
-                        <div data-number id="5" >5</div>
-                        <div data-number id="6" >6</div>
-                        <div data-operation id="substruct" ><i class="fas fa-minus"></i></div>
-                        
-                        <div data-number id="1" >1</div>
-                        <div data-number id="2" >2</div>
-                        <div data-number id="3" >3</div>
-                        <div data-operation id="add" ><i class="fas fa-plus"></i></div>
-                        
-                        <span data-number class="zero" id="0" >0</span>
-                        <div data-number id="dot" >.</div>
-                        <div data-equal id="equal" ><i class="fas fa-equals"></i></div>
+                        <div data-number id="9">9</div>
+                        <div data-operation id="multiple"><i class="fas fa-times"></i></div>
+
+                        <div data-number id="4">4</div>
+                        <div data-number id="5">5</div>
+                        <div data-number id="6">6</div>
+                        <div data-operation id="substruct"><i class="fas fa-minus"></i></div>
+
+                        <div data-number id="1">1</div>
+                        <div data-number id="2">2</div>
+                        <div data-number id="3">3</div>
+                        <div data-operation id="add"><i class="fas fa-plus"></i></div>
+
+                        <span data-number class="zero" id="0">0</span>
+                        <div data-number id="dot">.</div>
+                        <div data-equal id="equal"><i class="fas fa-equals"></i></div>
                     </div>
                 </div>
                 <div class="calc-icon"></div>
@@ -54,24 +58,33 @@
         </container>
         <div class="icon-container">
             <div class="icon-calc">
-              <div class="icon-screen">
-              </div>
-              <div class="icon-buttons">
-                <div class="icon 1"></div>
-                <div class="icon 2"></div>
-                <div class="icon three"></div>
-                <div class="icon four"></div>
-                <div class="icon five"></div>
-                <div class="icon six"></div>
-                <div class="span"></div>
-                <div class="icon seven"></div>
-              </div>
+                <div class="icon-screen">
+                </div>
+                <div class="icon-buttons">
+                    <div class="icon 1"></div>
+                    <div class="icon 2"></div>
+                    <div class="icon three"></div>
+                    <div class="icon four"></div>
+                    <div class="icon five"></div>
+                    <div class="icon six"></div>
+                    <div class="span"></div>
+                    <div class="icon seven"></div>
+                </div>
             </div>
-          </div>
-        <footer>
+        </div>
+        <div class="notes-container">
+            <div class="line one">
+                <div class="line-shaddow"></div>
+            </div>
+            <div class="line two"></div>
+            <div class="line three"></div>
+            <div class="line four"></div>
+        </div>
+        <!-- <footer>
             @Rinny
-        </footer>
+        </footer> -->
     </hero>
     <script src="./calc.js"></script>
 </body>
+
 </html>
