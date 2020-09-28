@@ -291,14 +291,14 @@ body {
   border-top-left-radius: 82px;
   border-top-right-radius: 82px;
   background-color: #FFD11C;
+  top: -113px;
+  /* box-shadow:0px 1px 1px #000000; */
 }
 .line-shaddow{
   position: absolute;
-  background-color: black;
-  height: 2px;
   width: 100%;
   bottom: 0;
-  box-shadow:inset 0 0 10px #000000;
+  box-shadow: 0px 0px 2px 1px #525252;
 }
 .line.four{
   border-bottom-left-radius: 82px;
