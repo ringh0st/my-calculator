@@ -82,7 +82,8 @@ const operationButtons = document.querySelectorAll('[data-operation]');
 const equalButton = document.querySelector('[data-equal]');
 const deleteButton = document.querySelector('[data-delete]');
 const prevValue = document.querySelector('[data-output]');
-const icon = document.querySelector('.icon-container');
+const clacIcon = document.querySelector('.icon-container');
+const notesIcon = document.querySelector('.notes-container');
 const closedIcon = document.querySelector('.fa-times-circle');
 const container = document.querySelector('.container');
 const calculator = new Calculator(prevValue);
@@ -114,7 +115,8 @@ equalButton.addEventListener('click', ()=>{
 closedIcon.addEventListener('click', ()=>{
     calculator.clear();
     calculator.updateDisplay();
-    icon.style.display = "grid";
+    clacIcon.style.display = "grid";
+    notesIcon.style.display = "flex";
     container.style.display = "none";  
 })
 deleteButton.addEventListener('click', () =>{
@@ -125,8 +127,8 @@ deleteButton.addEventListener('click', () =>{
 })
 
 //makes the app opened.
-icon.addEventListener('click', ()=>{
-    console.log(icon);
-    icon.style.display = "none";
+clacIcon.addEventListener('click', ()=>{
+    clacIcon.style.display = "none";
+    notesIcon.style.display = "none";
     container.style.display = "flex";
 })
