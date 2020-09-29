@@ -290,7 +290,9 @@ body {
   position: relative;
   border-top-left-radius: 82px;
   border-top-right-radius: 82px;
-  background-color: #FFD11C;
+  /* background-color: #FFD11C; */
+  background: #FFDB49;
+background: linear-gradient(0deg, rgba(233,193,33,1) 0%, rgba(255,211,35,1) 35%, rgba(255,213,46,1) 100%);
   top: -113px;
   /* box-shadow:0px 1px 1px #000000; */
 }
@@ -301,13 +303,20 @@ body {
   bottom: 0;
   box-shadow: 0px 0px 2px 1px #525252;
 }
+.line-shaddow-two{
+  position: absolute;
+  width: 100%;
+  bottom: -4px;
+  box-shadow: 0px 0px 11px 1px #525252;
+}
+
 .line-dot{
-  border-width: 0 0 4px 0;
+  border-width: 0 0 6px 0;
   border-style: dotted;
-  border-color: #9c9c9c;
+  border-color: #b9b6b6;
   border-image-slice: 33% 33%;
   border-image-repeat: round;
-  top: 84px;
+  top: 86px;
   position: relative;
 }
 .line.four{
