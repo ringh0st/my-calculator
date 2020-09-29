@@ -282,7 +282,7 @@ body {
 .line{
   height: 25%;
   width: 100%;
-  background-color: #f1f0f0;
+  background-color: #f1eeee;
   /* border: black solid 1px; */
 }
 
@@ -293,7 +293,7 @@ body {
   /* background-color: #FFD11C; */
   background: #FFDB49;
 background: linear-gradient(0deg, rgba(233,193,33,1) 0%, rgba(255,211,35,1) 35%, rgba(255,213,46,1) 100%);
-  top: -113px;
+  /* top: -113px; */
   /* box-shadow:0px 1px 1px #000000; */
 }
 
@@ -318,6 +318,20 @@ background: linear-gradient(0deg, rgba(233,193,33,1) 0%, rgba(255,211,35,1) 35%,
   border-image-repeat: round;
   top: 86px;
   position: relative;
+}
+.line.two{
+  width: 100%;
+  height: 25%;
+  bottom: -4px;
+  /* box-shadow: 0px 0px 11px 1px #525252; */
+  border-bottom: 4px solid #bdbaba;
+}
+.line.three{
+  width: 100%;
+  height: 25%;
+  bottom: -4px;
+  /* box-shadow: 0px 0px 11px 1px #525252; */
+  border-bottom: 4px solid #bdbaba;
 }
 .line.four{
   border-bottom-left-radius: 82px;
