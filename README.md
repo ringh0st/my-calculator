@@ -1,3 +1,3 @@
 # my-calculator
 
-<!-- Vanilla JS -->
+<!-- iphone apps with Vanilla JS / HTML / CSS -->

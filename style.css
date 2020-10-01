@@ -25,7 +25,9 @@
     align-content: center;
     border-radius: 15px;
     padding:10px;
-    background: #00000085
+    background: #00000085;
+    width: 38%;
+    height: 84%;
 }
 
 .calc-buttons-container{
@@ -153,12 +155,35 @@ grid-template-rows: repeat(5, 110px);
 .notes-app{
   margin:20px;
   /* display: none; */
-  justify-content: center;
-  align-content: center;
-  /* border-radius: 15px; */
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-content: center; */
+  border-radius: 15px;
   padding:10px;
-  background: #fffdfdc9
+  background: white;
+  display: flex;
+  width: 38%;
+  height: 84%;
 }
+.folder-edit{
+  width: 100%;
+  padding: 1rem;
+  direction: rtl;
+  font-size: 1rem;
+  color: orange;
+
+}
+.folder-main{
+  font-size: 2.5rem;
+  direction: ltr;
+  width: 100%;
+  padding: 2rem;
+  /* font-family: 'DM Sans', sans-serif; */
+  font-family: sans-serif;  
+  font-weight: 600;
+}
+
+
 
 /* Media Queries: Tablet Landscape */
 @media screen and (max-width: 375px) {
